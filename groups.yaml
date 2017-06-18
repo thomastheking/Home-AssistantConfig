@@ -1,0 +1,43 @@
+sensors:
+  name: Ambience
+  view: false
+  entities:
+  - sensor.living_room_thermostat_target
+  - sensor.living_room_thermostat_temperature
+  - sensor.multisensor_temperature_12_1
+  - sensor.multisensor_luminance_12_3
+  - sensor.multisensor_ultraviolet_12_27
+  - sensor.multisensor_relative_humidity_12_5
+  - sensor.living_room_thermostat_humidity
+Motion:
+  name: Motion detectors
+  view: false
+  entities:
+  - sensor.multisensor_burglar_12_10
+  - sensor.multisensor_lr_burglar_16_10
+  - sensor.multisensor_stairs_burglar_17_10
+  - binary_sensor.ip_camera_motion
+  - binary_sensor.ip_camera_motion_2
+  - binary_sensor.ip_camera_field_detection
+
+Weather:
+  name: Weather
+  view: false
+  entities:
+  - sensor.dark_sky_daily_low_apparent_temperature
+  - sensor.dark_sky_precip_probability
+
+Alarm:
+  name: Home alarm
+  view: false
+  entities:
+  - alarm_control_panel.ha_alarm
+
+NAS:
+  name: NAS
+  view: false
+  entities:
+  - sensor.cpu_load_total
+  - sensor.memory_usage_real
+  - sensor.network_up
+

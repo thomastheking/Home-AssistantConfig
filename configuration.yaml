@@ -1,0 +1,544 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 51.5794
+  longitude: 0.0246
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 25
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/London
+  customize:
+    zone.home:
+      track_ios: true
+    binary_sensor.living_room_thermostat_fan:
+      hidden: true
+    light.lr_wall_lights_level_11_0_2:
+      hidden: true
+    light.lr_wall_lights_level_11_0_4:
+      hidden: true    
+    light.lr_wall_lights_level_11_0_5:
+      hidden: true
+    light.lr_wall_lights_level_11_0_3:
+      hidden: true
+    light.lr_wall_lights_step_size_11_6:
+      hidden: true
+    light.lr_wall_lights_step_size_11_6_2:
+      hidden: true
+    light.lr_wall_lights_step_size_11_6_3:
+      hidden: true      
+    light.lr_wall_lights_step_size_11_6_4:
+      hidden: true
+    light.lr_wall_lights_step_size_11_6_5:
+      hidden: true  
+    
+    light.lr_spots_level_9_0_2:
+      hidden: true
+    light.lr_spots_level_9_0_3:
+      hidden: true
+    light.lr_spots_step_size_9_6:
+      hidden: true
+    light.lr_spots_step_size_9_6_2:
+      hidden: true
+    light.lr_spots_step_size_9_6_3:
+      hidden: true    
+    
+    light.pr_pendant_level_5_0_2:
+      hidden: true
+    light.pr_pendant_level_5_0_3:
+      hidden: true
+    light.pr_pendant_step_size_5_6:
+      hidden: true
+    light.pr_pendant_step_size_5_6_2:
+      hidden: true
+    light.pr_pendant_step_size_5_6_3:
+      hidden: true   
+
+    light.pr_spots_level_6_0_2:
+      hidden: true
+    light.pr_spots_level_6_0_3:
+      hidden: true
+    light.pr_spots_step_size_6_6:
+      hidden: true
+    light.pr_spots_step_size_6_6_2:
+      hidden: true
+    light.pr_spots_step_size_6_6_3:
+      hidden: true    
+
+    light.k_pendant_level_8_0_2:
+      hidden: true
+    light.k_pendant_level_8_0_3:
+      hidden: true
+    light.k_pendant_step_size_8_6:
+      hidden: true
+    light.k_pendant_step_size_8_6_2:
+      hidden: true
+    light.k_pendant_step_size_8_6_3:
+      hidden: true   
+
+    light.k_spots_level_7_0_2:
+      hidden: true
+    light.k_spots_level_7_0_3:
+      hidden: true
+    light.k_spots_step_size_7_6:
+      hidden: true
+    light.k_spots_step_size_7_6_2:
+      hidden: true
+    light.k_spots_step_size_7_6_3:
+      hidden: true    
+
+
+
+
+
+    sensor.lr_spots_alarm_level_9_1:
+      hidden: true
+    sensor.lr_spots_alarm_type_9_0:
+      hidden: true
+    sensor.lr_spots_energy_9_0:
+      hidden: true
+    sensor.lr_spots_exporting_9_32:
+      hidden: true
+    sensor.lr_spots_heat_9_7:
+      hidden: true
+    sensor.lr_spots_power_9_4:
+      hidden: true
+    sensor.lr_spots_power_9_8:
+      hidden: true
+    sensor.lr_spots_power_management_9_11:
+      hidden: true
+    sensor.lr_spots_sourcenodeid_9_2:
+      hidden: true
+    sensor.lr_spots_system_9_12:
+      hidden: true
+    sensor.lr_wall_lights_alarm_level_11_0:
+      hidden: true
+    sensor.lr_wall_lights_alarm_level_11_1:
+      hidden: true
+    sensor.lr_wall_lights_alarm_level_11_1_2:
+      hidden: true
+    sensor.lr_wall_lights_alarm_level_11_1_3:
+      hidden: true
+    sensor.lr_wall_lights_alarm_type_11_0:
+      hidden: true
+    sensor.lr_wall_lights_alarm_type_11_0_2:
+      hidden: true
+    sensor.lr_wall_lights_alarm_type_11_0_3:
+      hidden: true
+    sensor.lr_wall_lights_energy_11_0:
+      hidden: true
+    sensor.lr_wall_lights_exporting_11_32:
+      hidden: true
+    sensor.lr_wall_lights_heat_11_7:
+      hidden: true
+    sensor.lr_wall_lights_power_11_4:
+      hidden: true
+    sensor.lr_wall_lights_power_11_8:
+      hidden: true
+    sensor.lr_wall_lights_power_management_11_11:
+      hidden: true
+    sensor.lr_wall_lights_sourcenodeid_11_2:
+      hidden: true
+    sensor.lr_wall_lights_system_11_12:
+      hidden: true
+    sensor.lr_wall_lights_unknown_11_0_2:
+      hidden: true
+    sensor.lr_wall_lights_unknown_11_0_3:
+      hidden: true
+    sensor.pr_pendant_alarm_level_5_1:
+      hidden: true
+    sensor.pr_pendant_alarm_type_5_0:
+      hidden: true
+    sensor.pr_pendant_energy_5_0:
+      hidden: true
+    sensor.pr_pendant_exporting_5_32:
+      hidden: true
+    sensor.pr_pendant_heat_5_7:
+      hidden: true
+    sensor.pr_pendant_power_5_4:
+      hidden: true
+    sensor.pr_pendant_power_5_8:
+      hidden: true
+    sensor.pr_pendant_power_management_5_11:
+      hidden: true
+    sensor.pr_pendant_sourcenodeid_5_2:
+      hidden: true
+    sensor.pr_pendant_system_5_12:
+      hidden: true
+    sensor.pr_spots_alarm_level_6_1:
+      hidden: true
+    sensor.pr_spots_alarm_type_6_0:
+      hidden: true
+    sensor.pr_spots_energy_6_0:
+      hidden: true
+    sensor.pr_spots_exporting_6_32:
+      hidden: true
+    sensor.pr_spots_heat_6_7:
+      hidden: true
+    sensor.pr_spots_power_6_4:
+      hidden: true
+    sensor.pr_spots_power_6_8:
+      hidden: true
+    sensor.pr_spots_power_management_6_11:
+      hidden: true
+    sensor.pr_spots_sourcenodeid_6_2:
+      hidden: true
+    sensor.pr_spots_system_6_12:
+      hidden: true
+    sensor.k_pendant_alarm_level_8_1:
+      hidden: true
+    sensor.k_pendant_alarm_type_8_0:
+      hidden: true
+    sensor.k_pendant_energy_8_0:
+      hidden: true
+    sensor.k_pendant_exporting_8_32:
+      hidden: true
+    sensor.k_pendant_heat_8_7:
+      hidden: true
+    sensor.k_pendant_power_8_4:
+      hidden: true
+    sensor.k_pendant_power_8_8:
+      hidden: true
+    sensor.k_pendant_power_management_8_11:
+      hidden: true
+    sensor.k_pendant_sourcenodeid_8_2:
+      hidden: true
+    sensor.k_pendant_system_8_12:
+      hidden: true
+    sensor.k_spots_alarm_level_7_1:
+      hidden: true
+    sensor.k_spots_alarm_type_7_0:
+      hidden: true
+    sensor.k_spots_energy_7_0:
+      hidden: true
+    sensor.k_spots_exporting_7_32:
+      hidden: true
+    sensor.k_spots_heat_7_7:
+      hidden: true
+    sensor.k_spots_power_7_4:
+      hidden: true
+    sensor.k_spots_power_7_8:
+      hidden: true
+    sensor.k_spots_power_management_7_11:
+      hidden: true
+    sensor.k_spots_sourcenodeid_7_2:
+      hidden: true
+    sensor.k_spots_system_7_12:
+      hidden: true
+    sensor.multisensor_alarm_level_12_1:
+      hidden: true
+    sensor.multisensor_alarm_type_12_0:
+      hidden: true
+    sensor.multisensor_sourcenodeid_12_2:
+      hidden: true
+    sensor.living_room_thermostat_hvac_state:
+      hidden: true
+    sensor.living_room_thermostat_operation_mode:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_system_13_12:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid_13_2:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_management_13_11:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_13_8:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_power_13_4:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_heat_13_7:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_exporting_13_32:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_energy_13_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_type_13_0:
+      hidden: true
+    sensor.fibaro_system_fgd212_dimmer_2_alarm_level_13_1:
+      hidden: true
+    media_player.home_group_2:
+      hidden: true
+    light.lr_pendant_level_13_0_2:
+      hidden: true
+    light.lr_pendant_step_size_13_6:
+      hidden: true
+    light.lr_pendant_step_size_13_6_2:
+      hidden: true
+    light.k_pendant_level_8_0:
+      friendly_name: Kitchen pendant
+    light.k_spots_level_7_0:
+      friendly_name: Kitchen spotlights
+    light.lr_pendant_level_13_0:
+      friendly_name: Living room pendant
+    light.lr_spots_level_9_0:
+      friendly_name: Living room spotlights
+    light.lr_wall_lights_level_11_0:
+      friendly_name: Living room sconces
+    sensor.lr_pendant_alarm_level_13_1:
+      hidden: true
+    sensor.lr_pendant_alarm_type_13_0:
+      hidden: true
+    sensor.lr_pendant_energy_13_0:
+      hidden: true
+    sensor.lr_pendant_exporting_13_32:
+      hidden: true
+    sensor.lr_pendant_heat_13_7:
+      hidden: true
+    sensor.lr_pendant_power_13_4:
+      hidden: true
+    sensor.lr_pendant_power_13_8:
+      hidden: true
+    sensor.lr_pendant_power_management_13_11:
+      hidden: true
+    sensor.lr_pendant_sourcenodeid_13_2:
+      hidden: true
+    sensor.lr_pendant_system_13_12:
+      hidden: true
+    sensor.multisensor_lr_alarm_level_16_1:
+      hidden: true
+    sensor.multisensor_lr_alarm_type_16_0:
+      hidden: true
+    sensor.multisensor_stairs_alarm_level_17_1:
+      hidden: true
+    sensor.multisensor_stairs_alarm_type_17_0:
+      hidden: true
+    sensor.multisensor_stairs_sourcenodeid_17_2:
+      hidden: true
+    sensor.multisensor_lr_sourcenodeid_16_2:
+      hidden: true
+    binary_sensor.multisensor_lr_sensor_16_0:
+      hidden: true
+    binary_sensor.multisensor_stairs_sensor_17_0:
+      hidden: true
+
+    sensor.multisensor_burglar_12_10:
+      friendly_name: Kitchen
+      icon: mdi:run-fast
+    sensor.multisensor_lr_burglar_16_10:
+      friendly_name: Living room
+      icon: mdi:run-fast
+    sensor.multisensor_stairs_burglar_17_10:
+      friendly_name: Stairs
+      icon: mdi:run-fast
+    binary_sensor.ip_camera_motion:
+      friendly_name: Back door
+      icon: mdi:run-fast
+    binary_sensor.ip_camera_motion_2:
+      friendly_name: Side door
+      icon: mdi:run-fast
+
+
+    sensor.multisensor_luminance_12_3:
+      friendly_name: Kitchen brightness
+      icon: mdi:weather-sunny
+    sensor.multisensor_relative_humidity_12_5:
+      friendly_name: Kitchen humidity
+      icon: mdi:waves
+    sensor.multisensor_temperature_12_1:
+      friendly_name: Kitchen temperature
+      icon: mdi:thermometer
+    sensor.multisensor_ultraviolet_12_27:
+      friendly_name: Kitchen UV
+      icon: mdi:sunglasses
+    sensor.living_room_thermostat_temperature:
+      friendly_name: Living room temperature
+      icon: mdi:thermometer
+    sensor.living_room_thermostat_humidity:
+      friendly_name: Living room humidity
+      icon: mdi:waves
+    sensor.living_room_thermostat_target:
+      friendly_name: Nest target temperature
+      icon: mdi:speedometer
+#    sensor.yr.symbol:
+#      hidden: true
+    binary_sensor.living_room_thermostat_has_leaf:
+      hidden: true
+    binary_sensor.living_room_thermostat_is_locked:
+      hidden: true
+    binary_sensor.living_room_thermostat_is_using_emergency_heat:
+      hidden: true
+    binary_sensor.living_room_thermostat_online:
+      hidden: true
+    binary_sensor.multisensor_sensor_12_0:
+      hidden: true
+    sensor.door_sensor_alarm_level_15_1:
+      hidden: true
+    sensor.door_sensor_alarm_type_15_0:
+      hidden: true
+
+    sensor.dark_sky_daily_low_apparent_temperature:
+      friendly_name: likely low
+    sensor.dark_sky_precip_probability:
+      friendly_name: chance of rain
+
+#    binary_sensor.aeotec_dsb29_doorwindow_sensor_2nd_edition_sensor_15_0:
+#      friendly_name: Door sensor
+
+
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+zwave:
+  usb_path: /dev/zwave
+
+
+device_tracker:
+  - platform: bluetooth_tracker
+#  - platform: icloud
+#    username: cristyjoel@gmail.com
+#    password: Oskajo012
+  - platform: nmap_tracker
+    hosts: 192.168.0.1/24
+    home_interval: 10
+    exclude:
+     - 192.168.0.10
+     - 192.168.0.15
+     - 192.168.0.18
+     - 192.168.0.19
+     - 192.168.0.21
+     - 192.168.0.25
+
+nest:
+  client_id: 08523127-d51b-49be-aa2a-228b001754f1
+  client_secret: cD5BcRxkYRNAT2c8mHNpXfRf5
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: l1ghtbulb
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+
+recorder:
+  db_url: postgres://@/homeassistant
+
+# Discover some devices automatically
+discovery:
+
+notify:
+  - name: homeassistant
+    platform: pushbullet
+    api_key: o.fR4cFdI884vCZTp3650IafrhUyGnDw5o
+
+media_player:
+  - platform: cast
+  - platform: kodi
+    host: 192.168.0.21
+sensor:
+  - platform: synologydsm
+    host: 192.168.0.15
+    username: tom
+    password: backup
+    monitored_conditions:
+      - cpu_total_load
+      - memory_real_usage
+      - network_up
+  - platform: darksky
+    api_key: 3b34503b8a3126e89d8cefbfdbf7f6d9
+    monitored_conditions:
+      - icon
+      - apparent_temperature_min
+      - precip_probability
+
+camera:
+  - platform: synology
+    url: https://192.168.0.15:5001
+    username: tom
+    password: backup
+    verify_ssl: False
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+alarm_control_panel:
+  platform: manual
+  name: "HA Alarm"
+  code: !secret alarm_code
+  pending_time: 45
+  trigger_time: 45
+  disarm_after_trigger: false
+
+# switch:
+#  - platform: hikvisioncam
+#    host: 192.168.0.64
+#  - platform: hikvisioncam
+#    host: 192.168.0.65
+
+binary_sensor:
+  - platform: hikvision
+    host: 192.168.0.64
+    username: !secret hikvision_user
+    password: !secret hikvision_password
+  - platform: hikvision
+    host: 192.168.0.65
+    username: !secret hikvision_user
+    password: !secret hikvision_password
+
+light:
+  platform: hue
+  host: 192.168.0.25
+
+# ios:
+
+# Weather Prediction
+
+# Text to speech
+tts:
+  platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+scene: !include scenes.yaml
+
+
+
+
+#### scripts
+script:
+  light_flash:
+    alias: Light flash on
+    sequence:
+      - service: homeassistant.turn_on
+        data:
+          entity_id: group.all_lights
+      - delay:
+          seconds: 1
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.all_lights
+      - service: script.turn_on
+        data:
+          entity_id: script.light_loop
+  light_loop:
+    alias: Light flash loop
+    sequence:
+      - delay:
+          # time for flash light off
+          seconds: 1
+      - service: script.turn_on
+        data:
+          entity_id: script.light_flash
+

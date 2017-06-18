@@ -1,0 +1,17 @@
+  - name: Kitchen cooking
+    entities:
+      light.k_pendant_level_8_0:
+        state: on
+        brightness: 255
+      light.k_spots_level_7_0:
+        state: on
+        brightness: 255
+
+  - name: Kitchen dining
+    entities:
+      light.k_pendant_level_8_0:
+        state: on
+        brightness: 130
+      light.k_spots_level_7_0:
+        state: on
+        brightness: 50

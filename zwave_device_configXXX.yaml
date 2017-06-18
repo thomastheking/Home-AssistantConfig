@@ -1,0 +1,72 @@
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_10_1:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_10_1_2:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_5_1:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_6_1:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_7_1:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_8_1:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_alarm_type_10_0:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_alarm_type_5_0:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_energy_10_0:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_exporting_10_32:
+  ignored: true
+  polling_intensity: 0
+sensor.fibaro_system_fgd212_dimmer_2_heat_10_7:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_alarm_level_10_1:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_alarm_level_10_1_2:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_alarm_type_10_0:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_alarm_type_10_0_2:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_energy_10_0:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_exporting_10_32:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_heat_10_7:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_power_10_4:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_power_10_8:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_power_management_10_11:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_sourcenodeid_10_2:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_system_10_12:
+  ignored: true
+  polling_intensity: 0
+sensor.lr_pendant_i_think_unknown_10_0_2:
+  ignored: true
+  polling_intensity: 0

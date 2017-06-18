@@ -1,0 +1,133 @@
+- id: lights_out_routine
+  alias: All lights out
+  trigger:
+  - platform: time
+    after: '23:35:00'
+  action:
+  - service: light.turn_off
+
+- id: lights_on_for_milk
+  alias: Milk lights
+  trigger:
+    platform: state
+    entity_id: sensor.multisensor_burglar_12_10
+    state: '8'
+  condition:
+    condition: numeric_state
+    entity_id: sensor.multisensor_luminance_12_3
+    below: 50
+  action:
+    service: light.turn_on
+    entity_id: light.k_pendant_level_8_0
+    data:
+      brightness: 30
+
+
+- alias: Alert if motion
+  trigger:
+    - platform: state
+      entity_id: 
+        - sensor.multisensor_burglar_12_10
+        - sensor.multisensor_lr_burglar_16_10
+        - sensor.multisensor_stairs_burglar_17_10
+      state: '8'
+    - platform: state
+      entity_id:
+        - binary_sensor.ip_camera_motion
+        - binary_sensor.ip_camera_motion_2
+        - binary_sensor.ip_camera_field_detection
+        - binary_sensor.ip_camera_line_crossing
+      state: 'on'
+  action:
+    - service: notify.homeassistant
+      data:
+#        message: 'Home Alarm Triggered {{now.now().strftime("%Y%m%d-%H%M%S")}}'
+        message: 'Motion detected {{now().strftime("%Y%m%d - %H:%M:%S")}}'
+
+################################
+### manual alarm panel
+################################
+
+- alias: Alarm Away
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: 
+        - sensor.multisensor_burglar_12_10
+        - sensor.multisensor_lr_burglar_16_10
+        - sensor.multisensor_stairs_burglar_17_10
+      state: '8'
+    - platform: state
+      entity_id:
+        - binary_sensor.ip_camera_line_crossing
+      state: 'on'
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: armed_away
+  action:
+    service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.ha_alarm
+
+- alias: Alarm Home
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: 
+        - sensor.multisensor_burglar_12_10
+        - sensor.multisensor_lr_burglar_16_10
+        - sensor.multisensor_stairs_burglar_17_10
+      state: '8'
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: armed_home
+  action:
+    service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.ha_alarm
+
+################################
+### alarm light flash on
+################################
+
+- alias: Alarm triggered state
+  hide_entity: no
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: 'triggered'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: group.all_lights
+      data:
+        brightness_pct: 100
+        transition: 0.1
+    - service: homeassistant.turn_on
+      entity_id: switch.siren_switch_18_0
+    - service: tts.google_say
+      data:
+        message: 'Leave immediately, the police have been called. Leave immediately, the police have been called. Leave immediately, the police have been called. Leave immediately, the police have been called. Leave immediately, the police have been called. Leave immediately, the police have been called. Leave immediately, the police have been called. Leave immediately, the police have been called. '
+    - service: notify.homeassistant
+      data:
+#        message: 'Home Alarm Triggered {{now.now().strftime("%Y%m%d-%H%M%S")}}'
+        message: 'Home Alarm Triggered {{now().strftime("%Y%m%d-%H%M%S")}}'
+
+################################
+### alarm light flash off
+################################
+
+- alias: Alarm disarmed
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: 'disarmed'
+  action:
+    - service: script.turn_off
+      entity_id: script.light_loop
+    - service: notify.pushbullet
+      data:
+#        message: 'Home Alarm Reset {{now.now().strftime("%Y%m%d-%H%M%S")}}'
+        message: 'Home Alarm Reset {{now().strftime("%Y%m%d-%H%M%S")}}'
+
+################################
